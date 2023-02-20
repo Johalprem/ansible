@@ -1,0 +1,21 @@
+-
+    name: 'Stop the web services on web server nodes'
+    hosts: web_nodes
+    tasks:
+        -
+            name: 'Stop the web services on web server nodes'
+            command: 'service httpd stop'
+
+
+==============================
+
+-
+    name: 'Execute two commands on web_node1'
+    hosts: web_node1
+    tasks:
+        -
+            name: 'Execute a date command'
+            command: date
+        -
+            name: 'Execute a command to display hosts file'
+            command: 'cat /etc/hosts'
